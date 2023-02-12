@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import { Button } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, feedbackHandler, type }) =>
-  options.map(keyState => {
-    // console.log(keyState);
+  options.map(option => {
+    console.log(option);
 
     return (
-      <Button type={type} key={keyState} onClick={feedbackHandler}>
-        {keyState}
+      <Button type={type} key={option} onClick={() => feedbackHandler(option)}>
+        {option}
       </Button>
     );
   });
