@@ -3,8 +3,6 @@ import { Button } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, feedbackHandler, type }) =>
   options.map(option => {
-    console.log(option);
-
     return (
       <Button type={type} key={option} onClick={() => feedbackHandler(option)}>
         {option}
